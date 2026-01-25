@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -39,6 +40,9 @@ namespace BalanceSheet
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
             MainFrame.Navigate(typeof(BalanceSheet));
+
+            OverlappedPresenter presenter = (OverlappedPresenter)AppWindow.Presenter;
+            presenter.Maximize();
         }
     }
 }

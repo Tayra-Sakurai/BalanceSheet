@@ -78,9 +78,10 @@
             <AppBarButton Icon="Refresh" Command="{x:Bind tayras.LoadCommand}"
                           x:Uid="LoadCmdBtn"/>
         </CommandBar>
-        <Expander Grid.Row="2">
+        <Expander Grid.Row="2" HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Stretch">
             <Expander.Header>
-                <ToggleButton x:Uid="ToggleTotal"/>
+                <TextBlock x:Uid="ToggleTotal"/>
             </Expander.Header>
             <Expander.Content>
                 <StackPanel Spacing="4">

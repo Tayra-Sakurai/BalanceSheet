@@ -195,7 +195,7 @@
   <data name="DetailDescriptions.Text" xml:space="preserve">
     <value>You can check, modify and remove this entry from this page.</value>
   </data>
-  <data name="ToggleTotal" xml:space="preserve">
+  <data name="ToggleTotal.Text" xml:space="preserve">
     <value>Current balances.</value>
   </data>
 </root>
