@@ -209,4 +209,16 @@
     <value>確認</value>
     <comment>Return dialog title.</comment>
   </data>
+  <data name="LoadCmdBtn.Label" xml:space="preserve">
+    <value>更新</value>
+    <comment>Update button.</comment>
+  </data>
+  <data name="DetailTitle.Text" xml:space="preserve">
+    <value>詳細画面</value>
+    <comment>Detail page title.</comment>
+  </data>
+  <data name="DetailDescriptions.Text" xml:space="preserve">
+    <value>このページでは，登録された情報の確認と変更・削除ができます．</value>
+    <comment>Descriptions</comment>
+  </data>
 </root>

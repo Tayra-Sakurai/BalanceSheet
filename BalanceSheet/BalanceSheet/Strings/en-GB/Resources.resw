@@ -186,4 +186,13 @@
   <data name="Dialog.Title" xml:space="preserve">
     <value>Confirm of saving changes</value>
   </data>
+  <data name="LoadCmdBtn.Label" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="DetailTitle.Text" xml:space="preserve">
+    <value>Detail Page</value>
+  </data>
+  <data name="DetailDescriptions.Text" xml:space="preserve">
+    <value>You can check, modify and remove this entry from this page.</value>
+  </data>
 </root>

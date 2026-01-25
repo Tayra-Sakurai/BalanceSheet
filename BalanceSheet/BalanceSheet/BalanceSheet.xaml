@@ -75,11 +75,13 @@
                           Icon="Add" x:Uid="AddCmdBtn"/>
             <AppBarButton x:Name="DetailBtn" x:Uid="DetailBtn"
                           Icon="Document" Click="DetailBtn_Click"/>
+            <AppBarButton Icon="Refresh" Command="{x:Bind tayras.LoadCommand}"
+                          x:Uid="LoadCmdBtn"/>
         </CommandBar>
-        <StackPanel>
-            <NumberBox x:Uid="Cash" Value="{x:Bind tayras.CashTotal}"/>
-            <NumberBox x:Uid="Icoca" Value="{x:Bind tayras.IcocaTotal}"/>
-            <NumberBox x:Uid="Coop" Value="{x:Bind tayras.CoopTotal}"/>
+        <StackPanel Grid.Row="2">
+            <NumberBox x:Uid="Cash" Value="{x:Bind tayras.CashTotal, Mode=OneWay}"/>
+            <NumberBox x:Uid="Icoca" Value="{x:Bind tayras.IcocaTotal, Mode=Oneway}"/>
+            <NumberBox x:Uid="Coop" Value="{x:Bind tayras.CoopTotal, Mode=OneWay}"/>
         </StackPanel>
     </Grid>
 </Page>

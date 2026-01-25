@@ -8,37 +8,56 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel x:Name="MainPanel">
-        <StackPanel Orientation="Horizontal">
-            <CalendarDatePicker x:Uid="Date"
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Row="0" Grid.Column="0">
+            <StackPanel x:Name="MainPanel"
+                Margin="16,32,16,24"
+                Spacing="16">
+                <TextBlock Style="{StaticResource HeaderTextBlockStyle}"
+                   x:Uid="DetailTitle"/>
+                <TextBlock Style="{StaticResource BodyTextBlockStyle}" x:Uid="DetailDescriptions"/>
+                <StackPanel Orientation="Horizontal"
+                    Spacing="24">
+                    <CalendarDatePicker x:Uid="Date"
                                 Date="{x:Bind tayra.Date}"/>
-            <TimePicker x:Uid="TimeOfDay"
+                    <TimePicker x:Uid="TimeOfDay"
                         SelectedTime="{x:Bind tayra.TimeOfDay}"
                         ClockIdentifier="24HourClock"/>
-        </StackPanel>
-        <TextBox Text="{x:Bind tayra.Evt}"
+                </StackPanel>
+                <TextBox Text="{x:Bind tayra.Evt}"
                    x:Uid="Event"/>
-        <NumberBox Value="{x:Bind tayra.Cash}"
+                <NumberBox Value="{x:Bind tayra.Cash}"
                    x:Uid="Cash"/>
-        <NumberBox Value="{x:Bind tayra.Icoca}"
+                <NumberBox Value="{x:Bind tayra.Icoca}"
                    x:Uid="Icoca"/>
-        <NumberBox Value="{x:Bind tayra.Coop}"
+                <NumberBox Value="{x:Bind tayra.Coop}"
                    x:Uid="Coop"/>
-        <CommandBar Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
+                <CommandBar Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
                     x:Uid="CmdBar">
-            <AppBarButton Icon="Redo"
-                          x:Name="ReturnBtn"
+                    <AppBarButton x:Name="ReturnBtn"
                           x:Uid="ReturnBtn"
-                          Click="ReturnBtn_Click"/>
-            <AppBarButton Icon="SaveLocal"
+                          Click="ReturnBtn_Click">
+                        <AppBarButton.Icon>
+                            <FontIcon Glyph="&#xE845;" />
+                        </AppBarButton.Icon>
+                    </AppBarButton>
+                    <AppBarButton Icon="SaveLocal"
                           x:Uid="SaveCmdBtn"
                           Command="{x:Bind tayra.SaveCommand}"/>
-            <AppBarButton Icon="Delete"
+                    <AppBarButton Icon="Delete"
                           x:Uid="DeleteCmdBtn"
                           Command="{x:Bind tayra.DeleteCommand}"/>
-            <AppBarButton Icon="Send"
+                    <AppBarButton Icon="Send"
                           Command="{x:Bind tayra.SaveChangesCommand}"
                           x:Uid="SaveChangesCmdBtn"/>
-        </CommandBar>
-    </StackPanel>
+                </CommandBar>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
 </Page>
