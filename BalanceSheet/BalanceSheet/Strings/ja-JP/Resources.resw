@@ -221,4 +221,8 @@
     <value>このページでは，登録された情報の確認と変更・削除ができます．</value>
     <comment>Descriptions</comment>
   </data>
+  <data name="ToggleTotal" xml:space="preserve">
+    <value>残高</value>
+    <comment>Balance expander label.</comment>
+  </data>
 </root>

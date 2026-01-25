@@ -31,6 +31,11 @@ namespace BalanceSheet
             Activated += MainWindow_Activated;
         }
 
+        /// <summary>
+        /// This navigate the frame to the page.
+        /// </summary>
+        /// <param name="sender">This window.</param>
+        /// <param name="args">Event arguments.</param>
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
             MainFrame.Navigate(typeof(BalanceSheet));

@@ -25,18 +25,18 @@
                 <StackPanel Orientation="Horizontal"
                     Spacing="24">
                     <CalendarDatePicker x:Uid="Date"
-                                Date="{x:Bind tayra.Date}"/>
+                                Date="{x:Bind tayra.Date, Mode=TwoWay}"/>
                     <TimePicker x:Uid="TimeOfDay"
-                        SelectedTime="{x:Bind tayra.TimeOfDay}"
+                        SelectedTime="{x:Bind tayra.TimeOfDay, Mode=TwoWay}"
                         ClockIdentifier="24HourClock"/>
                 </StackPanel>
-                <TextBox Text="{x:Bind tayra.Evt}"
+                <TextBox Text="{x:Bind tayra.Evt, Mode=TwoWay}"
                    x:Uid="Event"/>
-                <NumberBox Value="{x:Bind tayra.Cash}"
+                <NumberBox Value="{x:Bind tayra.Cash, Mode=TwoWay}"
                    x:Uid="Cash"/>
-                <NumberBox Value="{x:Bind tayra.Icoca}"
+                <NumberBox Value="{x:Bind tayra.Icoca, Mode=TwoWay}"
                    x:Uid="Icoca"/>
-                <NumberBox Value="{x:Bind tayra.Coop}"
+                <NumberBox Value="{x:Bind tayra.Coop, Mode=TwoWay}"
                    x:Uid="Coop"/>
                 <CommandBar Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
                     x:Uid="CmdBar">
