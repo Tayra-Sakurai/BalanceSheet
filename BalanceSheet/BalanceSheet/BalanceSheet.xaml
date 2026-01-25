@@ -18,6 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -75,5 +76,10 @@
             <AppBarButton x:Name="DetailBtn" x:Uid="DetailBtn"
                           Icon="Document" Click="DetailBtn_Click"/>
         </CommandBar>
+        <StackPanel>
+            <NumberBox x:Uid="Cash" Value="{x:Bind tayras.CashTotal}"/>
+            <NumberBox x:Uid="Icoca" Value="{x:Bind tayras.IcocaTotal}"/>
+            <NumberBox x:Uid="Coop" Value="{x:Bind tayras.CoopTotal}"/>
+        </StackPanel>
     </Grid>
 </Page>
