@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="BalanceSheet.DetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel x:Name="MainPanel">
+        <StackPanel Orientation="Horizontal">
+            <CalendarDatePicker x:Uid="Date"
+                                Date="{x:Bind tayra.Date}"/>
+            <TimePicker x:Uid="TimeOfDay"
+                        SelectedTime="{x:Bind tayra.TimeOfDay}"
+                        ClockIdentifier="24HourClock"/>
+        </StackPanel>
+        <TextBox Text="{x:Bind tayra.Evt}"
+                   x:Uid="Event"/>
+        <NumberBox Value="{x:Bind tayra.Cash}"
+                   x:Uid="Cash"/>
+        <NumberBox Value="{x:Bind tayra.Icoca}"
+                   x:Uid="Icoca"/>
+        <NumberBox Value="{x:Bind tayra.Coop}"
+                   x:Uid="Coop"/>
+        <CommandBar Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
+                    x:Uid="CmdBar">
+            <AppBarButton Icon="Redo"
+                          x:Name="ReturnBtn"
+                          x:Uid="ReturnBtn"
+                          Click="ReturnBtn_Click"/>
+            <AppBarButton Icon="SaveLocal"
+                          x:Uid="SaveCmdBtn"
+                          Command="{x:Bind tayra.SaveCommand}"/>
+            <AppBarButton Icon="Delete"
+                          x:Uid="DeleteCmdBtn"
+                          Command="{x:Bind tayra.DeleteCommand}"/>
+            <AppBarButton Icon="Send"
+                          Command="{x:Bind tayra.SaveChangesCommand}"
+                          x:Uid="SaveChangesCmdBtn"/>
+        </CommandBar>
+    </StackPanel>
+</Page>

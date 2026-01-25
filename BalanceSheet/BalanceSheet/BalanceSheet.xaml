@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="BalanceSheet.BalanceSheet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BalanceSheet"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:CommunityToolkit.WinUI.Controls"
+    xmlns:models="using:ChimpanzeeLibrary.Models"
+    mc:Ignorable="d"
+    VerticalAlignment="Stretch"
+    HorizontalAlignment="Stretch">
+
+    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListView ItemsSource="{x:Bind tayras.Tayras}"
+                  x:Name="SuperListView"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Top">
+            <ListView.Header>
+                <controls:DataTable Margin="12,0,0,0">
+                    <controls:DataColumn x:Uid="IdCol"
+                                             DesiredWidth="50"/>
+                    <controls:DataColumn x:Uid="DateCol"
+                                             DesiredWidth="144"/>
+                    <controls:DataColumn x:Uid="EventCol"
+                                         DesiredWidth="3*"/>
+                    <controls:DataColumn x:Uid="CashCol"
+                                         DesiredWidth="*"/>
+                    <controls:DataColumn x:Uid="IcocaCol"
+                                         DesiredWidth="*"/>
+                    <controls:DataColumn x:Uid="CoopCol"
+                                         DesiredWidth="*"/>
+                </controls:DataTable>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Tayra">
+                    <controls:DataRow>
+                        <TextBlock Text="{x:Bind Id}"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Date}"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Event}"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Cash}"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Icoca}"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{x:Bind Coop}"
+                                   VerticalAlignment="Center"/>
+                    </controls:DataRow>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem"
+                       BasedOn="{StaticResource DefaultListViewItemStyle}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <CommandBar Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}"
+                    Grid.Row="1"
+                    x:Uid="CmdBar">
+            <AppBarButton Command="{x:Bind tayras.AddCommand}"
+                          Icon="Add" x:Uid="AddCmdBtn"/>
+            <AppBarButton x:Name="DetailBtn" x:Uid="DetailBtn"
+                          Icon="Document" Click="DetailBtn_Click"/>
+        </CommandBar>
+    </Grid>
+</Page>
