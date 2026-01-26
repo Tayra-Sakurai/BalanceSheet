@@ -64,5 +64,11 @@
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <NeutralLanguage>ja-JP</NeutralLanguage>
+    <Version>1.1.0</Version>
+    <Authors>Tayra Sakurai</Authors>
+    <Copyright>© 2026 Tayra Sakurai</Copyright>
+    <RepositoryUrl>https://github.com/Tayra-Sakurai/BalanceSheet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>UI changes.</PackageReleaseNotes>
   </PropertyGroup>
 </Project>
