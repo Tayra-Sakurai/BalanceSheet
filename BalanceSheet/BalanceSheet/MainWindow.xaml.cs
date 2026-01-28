@@ -48,7 +48,7 @@ namespace BalanceSheet
 
             if(userSid is string user)
             {
-                if (user == "S-1-5-21-1502476687-283602255-3893141761-1001")
+                if (user == SecretResources.UserName)
                 {
                     Debug.WriteLine(user);
                     MainFrame.Navigate(typeof(BalanceSheet));
