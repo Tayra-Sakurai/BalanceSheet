@@ -225,4 +225,12 @@
     <value>残高</value>
     <comment>Balance expander label.</comment>
   </data>
+  <data name="Notification.Title" xml:space="preserve">
+    <value>今日の記録リマインダー</value>
+    <comment>Reminder title.</comment>
+  </data>
+  <data name="Notification.Content" xml:space="preserve">
+    <value>今日の記録を付けましょう．</value>
+    <comment>Message.</comment>
+  </data>
 </root>

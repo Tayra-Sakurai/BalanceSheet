@@ -12,7 +12,7 @@
   <Identity
     Name="0d0948ba-b9c1-4451-bb80-393c46825029"
     Publisher="CN=taira"
-    Version="1.1.1.0" />
+    Version="2.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="0d0948ba-b9c1-4451-bb80-393c46825029" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -29,13 +29,13 @@
 
   <Resources>
     <Resource Language="ja-jp"/>
-	<Resource Language="en-gb"/>
+    <Resource Language="en-gb"/>
   </Resources>
 
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="$targetentrypoint$" uap18:TrustLevel="appContainer">
+      EntryPoint="$targetentrypoint$"  uap18:TrustLevel="appContainer">
       <uap:VisualElements
         DisplayName="BalanceSheet (Package)"
         Description="BalanceSheet (Package)"
@@ -51,6 +51,7 @@
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
     <systemai:Capability Name="systemAIModels"/>
+    <uap:Capability Name="userAccountInformation"/>
     <DeviceCapability Name="location"/>
   </Capabilities>
 </Package>

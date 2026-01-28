@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.Principal;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -37,12 +38,25 @@ namespace BalanceSheet
         /// </summary>
         /// <param name="sender">This window.</param>
         /// <param name="args">Event arguments.</param>
-        private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
+        private async void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
-            MainFrame.Navigate(typeof(BalanceSheet));
-
             OverlappedPresenter presenter = (OverlappedPresenter)AppWindow.Presenter;
             presenter.Maximize();
+
+            // Getting the user data.
+            string? userSid = WindowsIdentity.GetCurrent().User?.Value;
+
+            if(userSid is string user)
+            {
+                if (user == "S-1-5-21-1502476687-283602255-3893141761-1001")
+                {
+                    Debug.WriteLine(user);
+                    MainFrame.Navigate(typeof(BalanceSheet));
+                    return;
+                }
+            }
+
+            Application.Current.Exit();
         }
     }
 }

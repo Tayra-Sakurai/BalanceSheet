@@ -198,4 +198,10 @@
   <data name="ToggleTotal.Text" xml:space="preserve">
     <value>Current balances.</value>
   </data>
+  <data name="Notification.Title" xml:space="preserve">
+    <value>Reminder of Your Recording</value>
+  </data>
+  <data name="Notification.Content" xml:space="preserve">
+    <value>Would you record today's events?</value>
+  </data>
 </root>
