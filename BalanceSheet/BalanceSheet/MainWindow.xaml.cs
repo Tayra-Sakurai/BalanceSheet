@@ -30,6 +30,12 @@ namespace BalanceSheet
         {
             InitializeComponent();
 
+            if (AppWindowTitleBar.IsCustomizationSupported())
+            {
+                string path = AppContext.BaseDirectory;
+                AppWindow.SetIcon(Path.Combine(path, "Chrome_Logo.ico"));
+            }
+
             Activated += MainWindow_Activated;
         }
 
