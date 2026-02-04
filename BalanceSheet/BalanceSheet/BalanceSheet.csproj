@@ -16,6 +16,9 @@
     <None Remove="DetailPage.xaml" />
     <None Remove="Dialog.xaml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Chrome_Logo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Manifest Include="$(ApplicationManifest)" />
@@ -86,6 +89,7 @@
     <RepositoryUrl>https://github.com/Tayra-Sakurai/BalanceSheet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>AI features.</PackageReleaseNotes>
+    <ApplicationIcon>Chrome_Logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
     <WarningLevel>7</WarningLevel>
