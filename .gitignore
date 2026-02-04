@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /BalanceSheet/BalanceSheet/SecretResources.resx
 /BalanceSheet/BalanceSheet/SecretResources.Designer.cs
+
+# Icons
+**/Images/
